@@ -19,7 +19,7 @@ namespace Nop.Plugin.Tutorial.DistOfCustByCountry.Services
         private readonly IAddressService _addressService;
         private readonly ICountryService _countryService;
         private readonly ICustomerService _customerService;
-        /private readonly IRepository<Customer> _dataProvider;
+        private readonly IRepository<Customer> _dataProvider;
 
         public CustomersByCountry(IAddressService addressService, ICountryService countryService, ICustomerService customerService)
         {
@@ -28,18 +28,22 @@ namespace Nop.Plugin.Tutorial.DistOfCustByCountry.Services
             _customerService = customerService;
         }
 
-        public async Task<List<CustomersDistribution>> GetCustomersDistributionByCountryAsync()
+        //async Task<List<CustomersDistribution>> ICustomersByCountry.GetCustomersDistributionByCountryAsync()
+        //{
+        //    //_dataProvider.Table.Where(x => x.Active).Select(x => x);
+        //    //return await _customerService.GetAllCustomersAsync().Result
+        //    //    .Where(c => c.ShippingAddressId != null)
+        //    //    .Select(c => new
+        //    //    {
+        //    //        await(_countryService.GetCountryByAddressAsync( await _addressService.GetAddressById(c.ShippingAddressId ?? 0))).Name,
+        //    //        c.Username
+        //    //    })
+        //    //    .GroupBy(c => c.Name)
+        //    //    .Select(cbc => new CustomersDistribution { Country = cbc.Key, NoOfCustomers = cbc.Count() }).ToList();
+        //}
+        public Task<List<CustomersDistribution>> GetCustomersDistributionByCountryAsync()
         {
-            _dataProvider.Table.Where(x => x.Active).Select(x => x);
-            return await _customerService.GetAllCustomersAsync().Result
-                .Where(c => c.ShippingAddressId != null)
-                .Select(c => new
-                {
-                    await(_countryService.GetCountryByAddressAsync( await _addressService.GetAddressById(c.ShippingAddressId ?? 0))).Name,
-                    c.Username
-                })
-                .GroupBy(c => c.Name)
-                .Select(cbc => new CustomersDistribution { Country = cbc.Key, NoOfCustomers = cbc.Count() }).ToList();
+            throw new NotImplementedException();
         }
     }
 }
