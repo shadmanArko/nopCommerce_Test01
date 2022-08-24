@@ -1,0 +1,11 @@
+﻿{
+  "Group": "Widgets",
+  "FriendlyName": "Hello World2",
+  "SystemName": "Widget.HelloWorld2",
+  "Version": "2.0",
+  "SupportedVersions": ["4.50"],
+  "Author": "nopCommerce team",
+  "DisplayOrder": 1,
+  "FileName": "Nop.Plugin.Widgets.HelloWorld2.dll",
+  "Description": "This is the Updated Hello World Plugin"
+}

@@ -3,7 +3,7 @@
   "FriendlyName": "Hello World",
   "SystemName": "Widget.HelloWorld",
   "Version": "1.0",
-  "SupportedVersions": [ "4.50" ],
+  "SupportedVersions": ["4.50"],
   "Author": "nopCommerce team",
   "DisplayOrder": 1,
   "FileName": "Nop.Plugin.Widgets.HelloWorld.dll",
