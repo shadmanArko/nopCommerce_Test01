@@ -18,10 +18,10 @@ namespace Nop.Plugin.Tutorial.DistOfCustByCountry.Controllers
     [AutoValidateAntiforgeryToken]
     [AuthorizeAdmin] //confirms access to the admin panel
     [Area(AreaNames.Admin)] //specifies the area containing a controller or action
-    public class TutorialCustomersByCountry : BasePluginController
+    public class CustomersByCountryController : BasePluginController
     {
-        private readonly ICustomersByCountry _service;
-        public TutorialCustomersByCountry(ICustomersByCountry service)
+        private readonly ICustomersByCountry _service ;
+        public CustomersByCountryController(ICustomersByCountry service)
         {
             _service = service;
         }
@@ -36,7 +36,7 @@ namespace Nop.Plugin.Tutorial.DistOfCustByCountry.Controllers
             return View("~/Plugins/Tutorial.DistOfCustByCountry/Views/Configure.cshtml", customerSearchModel);
         }
 
-        [HttpPost]
+        //[HttpPost]
         public async Task<IActionResult> GetCustomersCountByCountry()
         {
             try

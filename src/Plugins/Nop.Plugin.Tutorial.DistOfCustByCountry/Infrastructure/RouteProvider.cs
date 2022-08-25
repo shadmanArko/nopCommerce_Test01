@@ -19,7 +19,7 @@ namespace Nop.Plugin.Tutorial.DistOfCustByCountry.Infrastructure
         {
             //add route for the access token callback
             endpointRouteBuilder.MapControllerRoute("CustomersDistributionByCountry", "Plugins/Tutorial/CustomerDistByCountry/",
-                new { controller = "TutorialCustomersByCountry", action = "GetCustomersCountByCountry" });
+                new { controller = "CustomersByCountry", action = "GetCustomersCountByCountry" });
         }
 
         /// <summary>

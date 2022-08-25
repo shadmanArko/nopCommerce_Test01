@@ -45,7 +45,7 @@
     <Folder Include="Areas\Admin\Extensions\" />
     <Folder Include="Areas\Admin\Factories\" />
     <Folder Include="Areas\Admin\Models\" />
-    <Folder Include="Areas\Admin\Pages\TutorialCustomersByCountry\" />
+    <Folder Include="Areas\Admin\Pages\CustomersByCountry\" />
     <Folder Include="Extensions\" />
     <Folder Include="Factories\" />
     <Folder Include="Pages\_Page_Views_Configure_cshtml\" />
