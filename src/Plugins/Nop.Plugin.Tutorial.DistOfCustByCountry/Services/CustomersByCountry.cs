@@ -34,7 +34,7 @@ namespace Nop.Plugin.Tutorial.DistOfCustByCountry.Services
             var allCustomers = await _customerService.GetAllCustomersAsync();
             var customers = allCustomers.Where(c => c.ShippingAddressId != null).ToList().Select(async c => new
                 {
-                   (await _countryService.GetCountryByAddressAsync(_addressService.GetAddressByIdAsync(c.ShippingAddressId ?? 0))).Name,
+                   (await _countryService.GetCountryByAddressAsync(await _addressService.GetAddressByIdAsync(c.ShippingAddressId ?? 0))).Name,
                     c.Username
                 }).GroupBy(async c => await  Task.FromResult(c.Result.Name))
                 .Select(async cbc => await Task.FromResult(new CustomersDistribution { Country = cbc.Key.Result, NoOfCustomers = cbc.Count() })).ToList();
