@@ -1,0 +1,11 @@
+﻿{
+  "Group": "BS23",
+  "FriendlyName": "ShowTableOfAllCustomersBeforeNews",
+  "SystemName": "Show.ShowTableBeforeNews",
+  "Version": "1.00",
+  "SupportedVersions": [ "4.50" ],
+  "Author": "BS23",
+  "DisplayOrder": 1,
+  "FileName": "Nop.Plugin.BS23.ShowTableOfAllCustomersBeforeNews.dll",
+  "Description": ""
+}
